@@ -1,0 +1,500 @@
+/* reeds gegeven: de kleuren van de vier divs binnen .figuur1 */
+.figuur1 { background-color: #b2ff59;}
+.figuur1 > div:nth-child(1) {background-color: #b2ff59;}
+.figuur1 > div:nth-child(2) {background-color: #00e676;}
+.figuur1 > div:nth-child(3) {background-color: #2AFC98;}
+.figuur1 > div:nth-child(4) {background-color: #01bfa5;}
+
+/* reeds gegeven: de kleuren van de vier divs binnen .figuur2 */
+.figuur2 { background-color: #ff80ab;}
+.figuur2 > div:nth-child(1) {background-color: #ff80ab;}
+.figuur2 > div:nth-child(2) {background-color: #c51162;}
+.figuur2 > div:nth-child(3) {background-color: #ff1844;}
+.figuur2 > div:nth-child(4) {background-color: #9D6A89;}
+
+/* reeds gegeven: de kleuren van de vier divs binnen .figuur3 */
+.figuur3 { background-color: #ffeb3b;}
+.figuur3 > div:nth-child(1) {background-color: #ffeb3b;}
+.figuur3 > div:nth-child(2) {background-color: #ff9300;}
+.figuur3 > div:nth-child(3) {background-color: #1BE7FF;}
+.figuur3 > div:nth-child(4) {background-color: #E4FF1A;}
+
+/* reeds gegeven: de kleuren van de vier divs binnen .figuur4 */
+.figuur4 { background-color: #40c4ff;}
+.figuur4 > div:nth-child(1) {background-color: #40c4ff;}
+.figuur4 > div:nth-child(2) {background-color: #2979ff;}
+.figuur4 > div:nth-child(3) {background-color: #3741ff;}
+.figuur4 > div:nth-child(4) {background-color: #2364AA;}
+
+/* En nog een weggever om de figuren al wat body te geven */
+
+.figuur1, .figuur2, .figuur3, .figuur4 {
+      max-width: 100%;
+      height: 300px;
+}
+
+/* Tips 1: laat deze zaken bovenaan de CSS-pagina staan en doe hieronder verder. */
+/* Tips 2: verwijs steeds naar een div binnen een figuur als volgt: .figuur4  > div:nth-child(2) {} voor de 2de div binnen .figuur4 */
+
+/* VEEL SUCCES! RUSTIG BLIJVEN, GESTRUCTUREERD EN MET FOCUS WERKEN. DAN KOMT HET GOED! */
+
+:root {
+	font-size: 62.5%;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: helvetica, sans-serif;
+    color: white;
+  }
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 3rem auto;
+}
+
+nav{
+
+  font-size: 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  border-bottom: solid 1px white;
+  padding-bottom: 1.5rem;
+
+}
+
+a{
+
+  text-decoration: none;
+
+}
+
+a:visited{
+
+  color: white;
+
+}
+
+body{
+
+  max-width: 70rem;
+  margin: 0 auto;
+  background-color: rgb(24, 24, 24);
+
+}
+
+main{
+
+  margin: 4rem auto;
+  border-bottom: solid 1px white;
+  padding-bottom: 6rem;
+
+}
+
+div{
+
+  margin: 4rem auto;
+
+}
+
+p{
+
+  font-size: 1.7rem;
+  line-height: 3rem;
+
+}
+
+.logo{
+
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  margin: 4rem auto;
+
+}
+
+footer{
+
+  margin-bottom: 6rem;
+
+}
+
+footer p{
+
+  text-align: center;
+  margin-bottom: 4rem;
+
+}
+
+footer ul{
+
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+
+}
+
+footer li{
+
+  display: inline;
+
+}
+
+@supports (grid-area: auto) {
+
+  main{
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 3rem;
+
+  }
+
+  main div{
+
+    margin: 0;
+
+  }
+
+  .figuur1{
+
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+
+  }
+
+  .figuur2{
+
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+
+  }
+
+  .figuur3{
+
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+
+  }
+
+  .figuur4{
+
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+
+  }
+
+  .eerste{
+
+    grid-column: 1/3;
+
+  }
+
+  .tweede{
+
+    grid-column: 1/3;
+
+  }
+
+  @media (min-width: 900px) {
+
+    .figuur1{
+
+      display: grid;
+      grid-template-columns: repeat(6,1fr);
+      grid-template-rows: repeat(6,1fr);
+      background-color: white;
+
+    }
+
+    .figuur2{
+
+      display: grid;
+      grid-template-columns: repeat(6,1fr);
+      grid-template-rows: repeat(6,1fr);
+      background-color: white;
+
+    }
+
+    .figuur3{
+
+      display: grid;
+      grid-template-columns: repeat(6,1fr);
+      grid-template-rows: repeat(6,1fr);
+      background-color: white;
+
+    }
+
+    .figuur4{
+
+      display: grid;
+      grid-template-columns: repeat(6,1fr);
+      grid-template-rows: repeat(6,1fr);
+      background-color: white;
+
+    }
+
+    .figuur1 > div:nth-child(1){
+
+      grid-column: 3 / 5;
+      grid-row: 2;
+
+    }
+
+    .figuur1 > div:nth-child(2){
+
+      grid-column: 2 / 6;
+      grid-row: 3;
+
+    }
+
+    .figuur1 > div:nth-child(3){
+
+      grid-column: 2 / 6;
+      grid-row: 4;
+
+    }
+
+    .figuur1 > div:nth-child(4){
+
+      grid-column: 3 / 5;
+      grid-row: 5;
+
+    }
+
+    .figuur2 > div:nth-child(1){
+
+      grid-column: 2;
+      grid-row: 2 / 4;
+
+    }
+
+    .figuur2 > div:nth-child(2){
+
+      grid-column: 3;
+      grid-row: 3 / 6;
+
+    }
+
+    .figuur2 > div:nth-child(3){
+
+      grid-column: 4;
+      grid-row: 3 / 6;
+
+    }
+
+    .figuur2 > div:nth-child(4){
+
+      grid-column: 5;
+      grid-row: 2 / 4;
+
+    }
+
+    .figuur3 > div:nth-child(1){
+
+      grid-column: 2;
+      grid-row: 4 / 6;
+
+    }
+
+    .figuur3 > div:nth-child(2){
+
+      grid-column: 3;
+      grid-row: 2 / 5;
+
+    }
+
+    .figuur3 > div:nth-child(3){
+
+      grid-column: 4;
+      grid-row: 2 / 5;
+
+    }
+
+    .figuur3 > div:nth-child(4){
+
+      grid-column: 5;
+      grid-row: 4 / 6;
+
+    }
+
+    .figuur4 > div:nth-child(1){
+
+      grid-column: 3 / 5;
+      grid-row: 2;
+
+    }
+
+    .figuur4 > div:nth-child(2){
+
+      grid-column: 2 / 6;
+      grid-row: 3;
+
+    }
+
+    .figuur4 > div:nth-child(3){
+
+      grid-column: 2 / 6;
+      grid-row: 4;
+
+    }
+
+    .figuur4 > div:nth-child(4){
+
+      grid-column: 3 / 5;
+      grid-row: 5;
+
+    }
+
+  }
+
+  @media (min-width: 1150px) {
+
+    body{
+
+      max-width: 1000px;
+
+    }
+
+    main{
+
+      grid-template-columns: repeat(3,1fr);
+
+    }
+
+    .eerste{
+
+      grid-column: 3;
+      grid-row: 1;
+
+    }
+
+    .tweede{
+
+      grid-column: 1;
+      grid-row: 2;
+
+    }
+
+    .figuur1 > div:nth-child(1){
+
+      grid-column: 2 / 6;
+      grid-row: 2;
+
+    }
+
+    .figuur1 > div:nth-child(2){
+
+      grid-column: 2;
+      grid-row: 3 / 5;
+
+    }
+
+    .figuur1 > div:nth-child(3){
+
+      grid-column: 5;
+      grid-row: 3 / 5;
+
+    }
+
+    .figuur1 > div:nth-child(4){
+
+      grid-column: 2 / 6;
+      grid-row: 5;
+
+    }
+
+    .figuur2 > div:nth-child(1){
+
+      grid-column: 2 / 6;
+      grid-row: 2;
+
+    }
+
+    .figuur2 > div:nth-child(2){
+
+      grid-column: 2;
+      grid-row: 3 / 5;
+
+    }
+
+    .figuur2 > div:nth-child(3){
+
+      grid-column: 3 / 5;
+      grid-row: 4;
+
+    }
+
+    .figuur2 > div:nth-child(4){
+
+      grid-column: 2;
+      grid-row: 5;
+
+    }
+
+    .figuur3 > div:nth-child(1){
+
+      grid-column: 2 / 6;
+      grid-row: 2;
+
+    }
+
+    .figuur3 > div:nth-child(2){
+
+      grid-column: 2;
+      grid-row: 3 / 5;
+
+    }
+
+    .figuur3 > div:nth-child(3){
+
+      grid-column: 3 / 5;
+      grid-row: 4;
+
+    }
+
+    .figuur3 > div:nth-child(4){
+
+      grid-column: 2;
+      grid-row: 5;
+
+    }
+
+    .figuur4 > div:nth-child(1){
+
+      grid-column: 2 / 6;
+      grid-row: 2;
+
+    }
+
+    .figuur4 > div:nth-child(2){
+
+      grid-column: 2;
+      grid-row: 3 / 5;
+
+    }
+
+    .figuur4 > div:nth-child(3){
+
+      grid-column: 5;
+      grid-row: 3 / 5;
+
+    }
+
+    .figuur4 > div:nth-child(4){
+
+      grid-column: 2 / 6;
+      grid-row: 5;
+
+    }
+
+  }
+
+}
